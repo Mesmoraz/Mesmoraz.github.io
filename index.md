@@ -1,5 +1,8 @@
-Here you can say lots of fun things about your site.
+# Welcome!
 
-Maybe say a some things about yourself.
+## My name is Taylor Philpott
+### Teacher -> Software Developer
 
-Or maybe what you plan to blog about.
+This blog outlines my project work and personal learning pathway to transition from teaching and public education into a long lost passion reborn.
+
+Come join me as I flesh out this blog and learn along the way.
