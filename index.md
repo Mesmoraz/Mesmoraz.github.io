@@ -1,8 +1,6 @@
 # Welcome!
 
 ## My name is Taylor Philpott
-### Teacher -> Software Developer
+### Game Engineer
 
-This blog outlines my project work and personal learning pathway to transition from teaching and public education into a long lost passion reborn.
-
-Come join me as I flesh out this blog and learn along the way.
+I used to be a teacher, and I saw students chasing their dreams with excitement and joy. They helped me realize I want to chase my dreams of working in software, too.
