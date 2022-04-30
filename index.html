@@ -125,15 +125,15 @@
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<a href="https://mesmoraz.itch.io/bbc" class="image featured"><img src="images/brick_break.gif" alt="" /></a>
+								<h3><a href="https://mesmoraz.itch.io/bbc">Brick Break Clone</a></h3>
+								<p>Destroy the Bricks without Losing your Ball!</p>
 							</article>
 						</div>
 					</div>
 					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
+						<p>Looking for a Game Engineer?</p>
+						<a href="#contact" class="button large scrolly">Get in touch with me!</a>
 					</footer>
 				</div>
 			</article>
@@ -145,32 +145,25 @@
 						<h2>Have me make stuff for you.</h2>
 						<p>Fill out the contact below and I'll get back to you!</p>
 					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
+					<form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+						<label for="Name" class="fcf-label">Your name</label>
+						<div class="fcf-input-group">
+							<input type="text" id="Name" name="Name" class="fcf-form-control" required>
 						</div>
-						<div class="col-12">
+					<div class="fcf-form-group">
+						<label for="Email" class="fcf-label">Your email address</label>
+						<div class="fcf-input-group">
+							<input type="email" id="Email" name="Email" class="fcf-form-control" required>
+						</div>
+					<div class="fcf-form-group">
+						<label for="Message" class="fcf-label">Your message</label>
+						<div class="fcf-input-group">
+							<textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+						</div>
+					</div>
+					<div class="fcf-form-group">
+						<button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+					</div>
 							<hr />
 							<h3>Find me on ...</h3>
 							<ul class="social">
