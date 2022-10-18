@@ -56,9 +56,12 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p>Hello! In this blog post I am going to be covering my implementation of a float curve in order to create
-                            a flying saucer taking off graph.
+                            a flying saucer taking off.
                         </p>
                         <h3>What I learned</h3>
+                        <li>Float Curve assets</li>
+                        <li>Apply Acceleration and Velocity to Simulated Physics</li>
+                        <li>Real life physics don't always feel fun in a simulated envrionment</li>
                         <p>
                             <strong>Float Curve:</strong>
                             <img src="/images/10-16-2022/float-curve.png" style="display: block; width: 80%;  margin-left: auto;  margin-right: auto;"></p>
@@ -104,7 +107,7 @@
         <mark>NewLocation.Z = AscendCurve->GetFloatValue(AscendTime * DeltaTime) * AscendSpeed * Value;</mark>
         </code>
         </pre>
-                <p>The two highlighted snippets above are the only peices of code that make the movemnet happen and are the back-bone of my implementation.</p>
+                <p>The two highlighted snippets above are the only peices of code that make the movement happen and are the back-bone of my implementation.</p>
                 <p>AscendTime is always being incremented or decremented based on the input parameter "Value" which is a binary 1 or -1 based on player input for up or down.</p>
                 <p>Velocity = Acceleration * DeltaTime</p>
                 <p>If the float curve is all possible values of acceleration, given time, then I can use that function to provide me with an acceleration given DeltaTime.</p>
