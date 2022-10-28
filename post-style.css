@@ -11284,3 +11284,9 @@ header.masthead .site-heading .h1 {
     font-size: 2.25rem;
   }
 }
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
