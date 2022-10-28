@@ -90,6 +90,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 img {
     transition:transform 0.25s ease;
 }
@@ -218,6 +220,14 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+}
+
+li.check-box  {
+  list-style-type: "\2611   ";
+}
+
+li.square-box  {
+  list-style-type: "\2610   ";
 }
 
 dt {
