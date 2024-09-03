@@ -3,33 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Taylor's Blog & Resume</title>
+    <title>Taylor G. Philpott - Software Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
+   <!-- Hero Section -->
+   <header id="hero-section">
+    <div class="overlay"></div> <!-- Added overlay div -->
+    <div class="hero-content">
         <h1>Taylor G. Philpott</h1>
+        <p>Bringing Worlds to Life with Unity and XR Technology</p>
+        <button class="header-cta" onclick="location.href='#portfolio-section'">View My Work</button>
+    </div>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/videos/hero-background.mp4" type="video/mp4">
+        <!-- Fallback image for older browsers -->
+        <img src="assets/images/hero-background-fallback.jpg" alt="Background Image">
+    </video>
     </header>
-    <main>
-        <section id="grid-section">
-            <div class="grid-container">
-                <a href="connect.html" class="grid-item" id="button1">Connect with Taylor</a>
-                <a href="done.html" class="grid-item" id="button2">What has Taylor Done?</a>
-                <a href="who.html" class="grid-item" id="button3">Who is Taylor?</a>
-                <a href="professional.html" class="grid-item" id="button4">Professional $#!&</a>
+
+<!-- Navigation Menu -->
+<nav id="main-nav" class="nav-bar">
+    <ul>
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#qa-experience">QA Experience</a></li>
+        <li><a href="#portfolio-section">My Work</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <!-- About Me Section -->
+<section id="about-me" class="scroll-section">
+    <div class="about-me-container">
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>Hi, I'm Taylor G. Philpott, a passionate software developer specializing in creating immersive experiences with Unity and XR technologies. With a strong foundation in game development and a background in teaching, I bring a unique blend of technical skills and communication abilities to every project.</p>
+            <p>My journey has taken me through various roles, including developing interactive VR applications, leading workshops, and mentoring aspiring developers. I thrive on solving complex problems and am driven by a desire to push the boundaries of what's possible in virtual and augmented reality.</p>
+            <p>Outside of coding, I enjoy crafting intricate D&D campaigns, exploring new game mechanics, and diving into the latest gaming trends. Let’s create something amazing together!</p>
+        </div>
+        <div class="about-me-image">
+            <img src="assets/images/headshot.jpg" alt="Taylor G. Philpott">
+        </div>
+    </div>
+</section>
+
+<!-- QA Experience Section -->
+<section id="qa-experience" class="scroll-section">
+    <h2>QA Experience & Technical Expertise</h2>
+    <div class="qa-container">
+        <!-- Experience Entry 1 -->
+        <div class="qa-entry">
+            <h3>Virtual Reality Platform QA</h3>
+            <p>Played a key role in quality assurance for advanced VR platforms, focusing on ensuring compatibility, stability, and performance across a range of XR devices. Leveraged automated and manual testing techniques to validate functionality and user experience.</p>
+        </div>
+        <!-- Experience Entry 2 -->
+        <div class="qa-entry">
+            <h3>Multiplayer VR Template Testing</h3>
+            <p>Executed comprehensive testing for a multiplayer VR template, ensuring seamless interaction and connectivity. Focused on functionality testing, performance benchmarking, and regression testing to provide a smooth user experience in multiplayer VR environments.</p>
+        </div>
+        <!-- Experience Entry 3 -->
+        <div class="qa-entry">
+            <h3>Cross-Platform Compatibility Testing</h3>
+            <p>Conducted cross-platform testing for XR development packages, verifying consistent performance and functionality across different hardware setups. Collaborated with development teams to identify and resolve issues related to compatibility and platform-specific behavior.</p>
+        </div>
+        <!-- Experience Entry 4 -->
+        <div class="qa-entry">
+            <h3>Performance Optimization and Stress Testing</h3>
+            <p>Led efforts in optimizing VR and XR applications by implementing performance benchmarks and stress testing scenarios. Identified bottlenecks and collaborated with engineers to enhance application stability and frame rate consistency under varying load conditions.</p>
+        </div>
+        <!-- Experience Entry 5 -->
+        <div class="qa-entry">
+            <h3>Quality Assurance for XR Interaction Systems</h3>
+            <p>Specialized in testing complex interaction systems within VR and AR environments, focusing on user interface responsiveness and input accuracy. Ensured compliance with best practices for XR development to deliver immersive and intuitive user experiences.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Portfolio Section -->
+<section id="portfolio-section" class="scroll-section">
+    <h2>My Work</h2>
+    <div class="portfolio-container">
+        <!-- Under Construction Notice -->
+        <div class="under-construction">
+            <p>🚧 This section is currently under construction as of September 3, 2024. Stay tuned for more updates! 🚧</p>
+        </div>
+        
+        <!-- Project 1 -->
+        <div class="portfolio-item">
+            <img src="assets/images/DontTurnItOff-thumbnail.jpg" alt="Don't Turn It Off Thumbnail">
+            <div class="portfolio-overlay">
+                <h3>Don't Turn It Off</h3>
+                <p>Horror Splash Art Scene made in Unity</p>
+                <a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank" class="project-link">View Project</a>
             </div>
-        </section>
-        <section id="featured-content">
-            <h2>Featured Content</h2>
-            <!-- Add some featured posts or projects here -->
-        </section>
-    </main>
+        </div>
+        <!-- Additional project items can be added here -->
+    </div>
+</section>
+
+<!-- Skills & Tools Section -->
+<section id="skills-section" class="scroll-section">
+    <h2>Skills & Tools</h2>
+    
+    <!-- Technical Skills -->
+    <div class="skills-container">
+        <!-- Skill: Unity -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Unity Icon">
+            <div class="skill-info">
+                <p>Unity</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <p class="skill-description">Extensive experience in Unity for developing immersive VR applications. <a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank">View Project</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: XR Development -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/4247/4247962.png" alt="XR Icon">
+            <div class="skill-info">
+                <p>XR Development</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <p class="skill-description">Skilled in building and deploying augmented and virtual reality experiences. Certified in AR Foundation. <a href="#">View XR Portfolio</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: Automation Testing -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/4117/4117112.png" alt="Automation Testing Icon">
+            <div class="skill-info">
+                <p>Automation Testing</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <p class="skill-description">Expert in designing automated test frameworks using Selenium, Appium, and other tools. <a href="#">Explore Automation Projects</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: Test Strategy -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/3190/3190804.png" alt="Test Strategy Icon">
+            <div class="skill-info">
+                <p>Test Strategy & Planning</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <p class="skill-description">Experienced in defining and implementing test strategies for large-scale projects. <a href="#">Read Case Study</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: Continuous Integration -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5313/5313470.png" alt="CI/CD Icon">
+            <div class="skill-info">
+                <p>CI/CD & DevOps</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 30%;"></div>
+                </div>
+                <p class="skill-description">Proficient in setting up CI/CD pipelines using Jenkins, GitLab, and Azure DevOps. <a href="#">See Workflow Automation</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leadership & Soft Skills -->
+    <div class="skills-container">
+        <!-- Skill: Team Leadership -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Leadership Icon">
+            <div class="skill-info">
+                <p>Team Leadership</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+                <p class="skill-description">Led cross-functional teams to deliver high-quality products on time. <a href="#">View Leadership Insights</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: Mentorship -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/3566/3566359.png" alt="Mentorship Icon">
+            <div class="skill-info">
+                <p>Mentorship & Training</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <p class="skill-description">Actively mentor junior developers, fostering growth and technical excellence. <a href="#">Read More on Mentorship</a></p>
+            </div>
+        </div>
+
+        <!-- Skill: Strategic Planning -->
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/4229/4229790.png" alt="Strategic Planning Icon">
+            <div class="skill-info">
+                <p>Strategic Planning</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+                <p class="skill-description">Developed strategic initiatives to align development and testing goals. <a href="#">Explore Strategic Initiatives</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="scroll-section">
+        <h2>Get in Touch</h2>
+        <p>If you’re looking for a dedicated software developer to bring your projects to life, let’s connect!</p>
+        <button class="contact-cta" onclick="location.href='mailto:your-email@example.com'">Contact Me</button>
+    </section>
+
     <footer>
         <p>&copy; 2024 Taylor G. Philpott</p>
+        <div class="social-links">
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
+            <!-- Add other social links if needed -->
+        </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

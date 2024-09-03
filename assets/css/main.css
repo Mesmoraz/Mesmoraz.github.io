@@ -1,133 +1,456 @@
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     overflow-x: hidden;
-    background: url('C:/Projects/Mesmoraz.github.io/assets/images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
+    scroll-behavior: smooth;
 }
-
-header {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
+/* Basic Navigation Bar Setup */
+.nav-bar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 4rem;
-    margin: 0;
-    line-height: 1;
-    background: linear-gradient(to right, #ff4e50, #f9d423);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-main {
-    margin-top: 10rem; /* Adjust for fixed header height */
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1; /* Ensure content is above pseudo-elements */
-}
-
-#grid-section {
+    background: rgba(36, 36, 62, 0.8); /* Semi-transparent background */
+    padding: 1rem 2rem;
+    z-index: 10;
     display: flex;
     justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Navigation List and Links */
+.nav-bar ul {
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Space between navigation items */
+}
+
+.nav-bar ul li {
+    display: inline-block; /* Align items horizontally */
+}
+
+.nav-bar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #f0f0f0; /* Light text color */
+    font-weight: bold; /* Bold text for emphasis */
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Padding around text */
+    position: relative; /* For positioning pseudo-elements */
+    transition: transform 0.3s, text-shadow 0.3s, color 0.3s; /* Smooth transitions */
+    transform-style: preserve-3d; /* Ensure 3D effects are applied */
+    transform: translateZ(0); /* Initial state for 3D transform */
+}
+
+/* Pop-Out Effect on Active Link */
+.nav-bar ul li a.active {
+    transform: translateZ(10px); /* Create a pop-out effect */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow to enhance 3D effect */
+    color: #ff69b4; /* Change color for emphasis */
+}
+
+/* Test with Scale Animation */
+.nav-bar ul li a.active {
+    animation: scaleUp 3s ease-in-out infinite;
+}
+
+@keyframes scaleUp {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slight scaling to test animation */
+    }
+}
+
+/* Hero Section */
+#hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
     align-items: center;
-    min-height: 50vh;
-    width: 100%;
-    padding: 2rem;
-    position: relative;
-}
-
-.grid-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-}
-
-.grid-item {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 2rem;
+    justify-content: center;
     text-align: center;
-    border-radius: 12px;
-    text-decoration: none;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative;
-    z-index: 1;
-    backdrop-filter: blur(5px);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.2); /* Subtle pink shadow */
 }
 
-.grid-item::before {
-    content: '';
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px;
+    text-shadow: 3px 3px 6px rgba(128, 0, 128, 0.7); /* Purple shadow for depth */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+}
+
+#background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    z-index: -1;
-    backdrop-filter: blur(10px);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1;
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #E0BBE4; /* Light pink text */
+    text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.5); /* Soft pink shadow */
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0; /* Light gray text */
+    text-shadow: 2px 2px 5px rgba(128, 0, 128, 0.5); /* Purple shadow */
+}
+
+.header-cta {
+    padding: 0.5rem 2rem;
+    background-color: #E0BBE4;
+    color: #24243e;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4); /* Pink shadow */
+}
+
+.header-cta:hover {
+    background-color: #cda1d0;
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.6); /* Darker pink shadow on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+    box-shadow: 0 0 15px rgba(75, 0, 130, 0.2); /* Light purple shadow */
+}
+
+#grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3); /* Soft blue-purple shadow */
 }
 
 .grid-item:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5); /* Pink shadow on hover */
+}
+
+/* About Me Section Styles */
+#about-me {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.3); /* Medium purple shadow */
+}
+
+.about-me-container {
+    max-width: 1200px; /* Increased max-width for larger screens */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem; /* Increased gap for better spacing */
+    padding: 0 2rem; /* Added padding for responsiveness */
+}
+
+.about-me-text {
+    flex: 2; /* More space for text */
+    min-width: 300px;
+    max-width: 600px;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5); /* Pink shadow for text */
+}
+
+.about-me-image {
+    flex: 1; /* Less space for the image */
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-image img {
+    width: 250px; /* Increased width for better visibility */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Responsive */
+    border-radius: 50%; /* Rounded shape */
+    box-shadow: 0 4px 8px rgba(138, 43, 226, 0.6); /* Purple shadow */
+    object-fit: cover; /* Covers the space without stretching */
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+    .about-me-image img {
+        width: 300px; /* Larger image on bigger screens */
+    }
+
+    .about-me-container {
+        gap: 6rem; /* More space between elements on larger screens */
+    }
+}
+
+/* Scrolling Narrative Section */
+.scroll-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #24243e, #302b63);
+    padding: 5rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.2); /* Light purple shadow */
+}
+
+/* Navigation Menu Styles with Pink Highlight */
+.nav-bar ul li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 0.6); /* Pink highlight */
+    border-radius: 8px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-out;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3); /* Pink shadow */
+}
+
+.nav-bar ul li a.active::after {
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5); /* Enhanced pink shadow on active */
+}
+
+.nav-bar ul li a::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 182, 193, 0.2); /* Light pink shadow */
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.nav-bar ul li a.active::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* Portfolio Item Styles */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); /* Pink shadow */
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
     transform: scale(1.05);
 }
 
-.grid-item:hover::before {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-#featured-content {
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 1200px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
+.portfolio-overlay {
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #f0f0f0;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .grid-item {
-        font-size: 1rem;
-    }
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    background-color: #E0BBE4;
+    color: #24243e;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #cda1d0;
+}
+
+/* QA Experience Section Styles */
+#qa-experience {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.3); /* Purple shadow */
+}
+
+.qa-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.qa-entry {
+    background-color: #24243e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); /* Pink shadow */
+    text-align: left;
+}
+
+.qa-entry h3 {
+    color: #E0BBE4;
+    margin-bottom: 1rem;
+}
+
+.qa-entry p {
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+#skills-section {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skill {
+    width: 300px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill-info {
+    text-align: left;
+}
+
+.skill-bar {
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+    height: 8px;
+}
+
+.skill-level {
+    background-color: #6a0dad;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.skill-description {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.skill-description a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.skill-description a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.3); /* Purple shadow */
+}
+
+.under-construction {
+    background-color: #ffd700;
+    color: #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
 }
