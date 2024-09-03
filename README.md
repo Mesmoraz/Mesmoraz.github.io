@@ -1,6 +1,6 @@
 # Taylor G. Philpott's GitHub Portfolio
 
-**QA Engineer** • Seattle, WA • (206) 472-5125 • [taylor.philpott@gmail.com](mailto:taylor.philpott@gmail.com) • [LinkedIn](#) • [GitHub](#) • [Portfolio](#)
+**QA Engineer** • Seattle, WA • [taylor.philpott@gmail.com](mailto:taylor.philpott@gmail.com) • [LinkedIn](#) • [GitHub](#) • [Portfolio](#)
 
 Welcome to my GitHub portfolio! I'm Taylor G. Philpott, a Quality Assurance Engineer with a strong background in testing and automation for XR applications and game development. My expertise lies in ensuring the performance and functionality of cutting-edge XR products using both manual and automated testing frameworks. I am passionate about leveraging my skills to deliver high-quality software that enhances user experiences.
 
