@@ -71,9 +71,8 @@ I am dedicated to finding opportunities where I can thrive, continuously learn, 
 
 ## 📬 Contact
 
-- **LinkedIn**: [Your LinkedIn Profile](#)
+- **LinkedIn**: [Your LinkedIn Profile](linkedin.com/in/taylorgphil/)
 - **Email**: [taylor.philpott@gmail.com](mailto:taylor.philpott@gmail.com)
-- **Portfolio**: [Your Portfolio Link](#)
 
 ---
 
