@@ -1,51 +1,352 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+   Prologue by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>t.g.Philpott - Home</title>
-  <!-- Google Fonts: Poppins -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
+  <head>
+    <title>t.g.Philpott - Portfolio & Resume</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Prologue's main CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body class="is-preload">
 
-  <!-- === Hero Section === -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hey, I’m t.g.Philpott</h1>
-      <p>
-        I love <strong>making games</strong>, <strong>writing stories</strong>, 
-        and <strong>learning new things</strong>.
-        This site is a hub for my personal projects, DnD campaigns, VR/AR experiments, and more.
-        <br><br>
-        You’ve landed on my portfolio. 
-        <strong>Business inquiries</strong> or anyone curious about my 
-        <strong>professional experience</strong> —
-        check out the <strong>Resume</strong> or <strong>Portfolio</strong> pages. 
-        <strong>Casual readers</strong> can jump to the Blog & Fun section. Enjoy exploring!
-      </p>
+    <!-- Header (includes nav links for Intro, Portfolio, Resume, Blog) -->
+    <div id="header">
+      <div class="top">
+        <!-- Logo/Avatar -->
+        <div id="logo">
+          <span class="image avatar48">
+            <!-- Replace with your own image if you have one -->
+            <img src="images/avatar.jpg" alt="Avatar" />
+          </span>
+          <h1 id="title">t.g.Philpott</h1>
+          <p>QA Engineer &amp; Game Enthusiast</p>
+        </div>
 
-      <!-- Updated CTA Buttons -->
-      <div class="cta-buttons">
-        <!-- Button to resume.html -->
-        <a href="resume.html" class="btn">Resume</a>
-        <!-- Button to portfolio.html -->
-        <a href="portfolio.html" class="btn-secondary">Portfolio</a>
-        <!-- Button to #blog on this page -->
-        <a href="#blog" class="btn-secondary">Blog & Fun</a>
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul>
+            <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+            <li><a href="#resume" id="resume-link"><span class="icon solid fa-file">Resume</span></a></li>
+            <li><a href="#blog" id="blog-link"><span class="icon solid fa-book">Blog &amp; Fun</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottom">
+        <!-- Social Icons (optional) -->
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span>Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-github"><span>GitHub</span></a></li>
+          <li><a href="#" class="icon solid fa-envelope"><span>Email</span></a></li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- (Removed the old #portfolio section since it's now standalone) -->
+    <!-- Main content container -->
+    <div id="main">
+      <!-- Intro Section (#top) -->
+      <section id="top" class="one dark cover">
+        <div class="container">
+          <header>
+            <h2 class="alt">Hey, I’m <strong>t.g.Philpott</strong></h2>
+            <p>
+              I love <strong>making games</strong>, <strong>writing stories</strong>, 
+              and <strong>learning new things</strong>. This site is a hub for my personal projects, 
+              DnD campaigns, VR/AR experiments, and more.
+              <br><br>
+              <strong>Business inquiries</strong> or anyone curious about my 
+              <strong>professional experience</strong> — scroll or jump to the <strong>Resume</strong> or 
+              <strong>Portfolio</strong> sections. <strong>Casual readers</strong> can check out the 
+              <strong>Blog &amp; Fun</strong> section. Enjoy exploring!
+            </p>
+          </header>
+          <footer>
+            <a href="#portfolio" class="button scrolly">Portfolio</a>
+            <a href="#resume" class="button">Resume</a>
+            <a href="#blog" class="button">Blog &amp; Fun</a>
+          </footer>
+        </div>
+      </section>
 
-  <!-- Example Blog Section anchor (#blog) -->
-  <section id="blog" class="blog-section">
-    <h2>Blog & Fun</h2>
-    <!-- Blog content goes here -->
-  </section>
+      <!-- Portfolio Section (#portfolio) -->
+      <section id="portfolio" class="two">
+        <div class="container">
+          <header>
+            <h2>Portfolio</h2>
+          </header>
+          <p>
+            Explore my collection of personal and professional projects, covering 
+            <strong>XR</strong>, <strong>Game Development</strong>, <strong>Blog Features</strong>, and more. 
+            Use the search bar below to quickly filter projects by name, description, or tags.
+          </p>
 
-</body>
-</html>
+          <!-- Search Bar -->
+          <input
+            type="text"
+            id="portfolio-search"
+            placeholder="Search projects by title, tags, or keywords..."
+          />
+
+          <!-- Portfolio Grid (Prologue style: row + columns) -->
+          <div id="portfolio-container" class="row">
+            <!-- Example Card 1 -->
+            <article class="col-6 col-12-mobile portfolio-card"
+              data-title="Unity Game - Crypt"
+              data-tags="Unity Game-dev"
+              data-description="A 3D platformer with procedurally generated levels"
+            >
+              <a href="#" class="image fit">
+                <img src="images/cryptTitle.jpg" alt="Crypt Game Preview">
+              </a>
+              <header>
+                <h3>Crypt</h3>
+                <p class="date-completed">Completed: Aug 2023</p>
+              </header>
+              <p class="description">
+                A 3D platformer with procedurally generated levels and challenging obstacles.
+              </p>
+              <p class="tags"><strong>Tags:</strong> Unity, Game-dev, platformer</p>
+              <footer>
+                <a href="https://mesmoraz.itch.io/crypt" class="button small" target="_blank">
+                  View on Itch.io
+                </a>
+              </footer>
+            </article>
+
+            <!-- Example Card 2 -->
+            <article class="col-6 col-12-mobile portfolio-card"
+              data-title="DnD Homebrew Campaign"
+              data-tags="personal blog tabletop"
+              data-description="A custom Dungeons & Dragons campaign"
+            >
+              <a href="#" class="image fit">
+                <img src="images/dnd_campaign.gif" alt="DnD Campaign Preview">
+              </a>
+              <header>
+                <h3>DnD Homebrew Campaign</h3>
+                <p class="date-completed">Completed: June 2022</p>
+              </header>
+              <p class="description">
+                A narrative-rich tabletop adventure with custom monsters, lore, and quest lines.
+              </p>
+              <p class="tags"><strong>Tags:</strong> Personal, Blog, Tabletop</p>
+              <footer>
+                <a href="downloads/dnd_campaign.pdf" class="button small" download>
+                  Download PDF
+                </a>
+              </footer>
+            </article>
+
+            <!-- Example Card 3 -->
+            <article class="col-6 col-12-mobile portfolio-card"
+              data-title="Android Performance Dashboard"
+              data-tags="professional android blog data"
+              data-description="Built a performance dashboard using Big Query and Looker Studio"
+            >
+              <span class="image fit">
+                <iframe
+                  width="100%"
+                  height="200"
+                  src="https://www.youtube.com/embed/VIDEO_ID"
+                  title="Android Performance Dashboard Demo"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </span>
+              <header>
+                <h3>Android Performance Dashboard</h3>
+                <p class="date-completed">Completed: Feb 2023</p>
+              </header>
+              <p class="description">
+                Created using BigQuery and Looker Studio to track KPIs for mobile app performance.
+              </p>
+              <p class="tags"><strong>Tags:</strong> Professional, Android, Data</p>
+              <footer>
+                <a href="https://github.com/tgphilpott/android-perf-dashboard" 
+                   class="button small" target="_blank">
+                  View on GitHub
+                </a>
+              </footer>
+            </article>
+          </div> <!-- /#portfolio-container -->
+        </div> <!-- /.container -->
+      </section> <!-- /#portfolio -->
+
+      <!-- Resume Section (#resume) 
+           Replacing the placeholder with your actual resume code. -->
+      <section id="resume" class="three">
+        <!-- "resume-hero" style block -->
+        <div class="resume-hero">
+          <div class="container">
+            <h2>Resume &amp; Experience</h2>
+            <!-- "Go to Portfolio" link -->
+            <a class="button small" href="#portfolio">Go to Portfolio</a>
+            <p>
+              Dynamic <strong>Software Quality Engineer</strong> with experience in 
+              mobile and desktop application testing. Skilled at 
+              <strong>test case development, performance testing,</strong> and agile collaboration.
+              Based in <strong>Seattle, WA</strong>, seeking roles in 
+              <strong>Gameplay Engineering</strong>, <strong>Software Engineering</strong>, 
+              or <strong>Game Design</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="resume-section">
+          <div class="container">
+            <h3>Professional Experience</h3>
+            <!-- Unity Technologies -->
+            <div class="job-entry">
+              <h4>Software Engineer, Quality (XR) <span>@ Unity Technologies</span></h4>
+              <p class="job-dates">Feb 2023 – Present | Bellevue, WA</p>
+              <ul>
+                <li>Tested Unity’s <strong>Quest 3</strong> and <strong>Oculus Support Packages</strong>, ensuring cross-device compatibility and identifying critical bugs pre-release.</li>
+                <li>Developed comprehensive functional, performance, and regression test cases, boosting test coverage by 35%.</li>
+                <li>Collaborated with cross-platform teams to ensure seamless integration of Unity SDKs across Android & iOS.</li>
+                <li>Built a performance dashboard using <strong>BigQuery</strong> and <strong>Looker Studio</strong>, reducing debugging time by 20%.</li>
+                <li>Served as QA lead for agile sprints, prioritizing tasks to meet tight deadlines without compromising quality.</li>
+              </ul>
+            </div>
+
+            <!-- Tests Assured at Meta -->
+            <div class="job-entry">
+              <h4>QA Analyst (Horizon Worlds) <span>@ Tests Assured at Meta</span></h4>
+              <p class="job-dates">2022 – Feb 2023 | Bellevue, WA</p>
+              <ul>
+                <li>Drove QA testing for high-visibility features in <strong>Horizon Worlds</strong> (Shopping, Party Comms, Travel), ensuring Android/iOS parity.</li>
+                <li>Reduced reported user issues by 25% through thorough acceptance and performance test case execution.</li>
+                <li>Streamlined user workflows in collaboration with devs &amp; designers, improving in-app navigation.</li>
+                <li>Mentored QA team members for <strong>ISTQB</strong> certification, increasing pass rates by 60%.</li>
+              </ul>
+            </div>
+
+            <!-- DevLaunchers -->
+            <div class="job-entry">
+              <h4>Gameplay Engineer <span>@ DevLaunchers</span></h4>
+              <p class="job-dates">2021 – 2022 | Seattle, WA</p>
+              <ul>
+                <li>Designed automated tests for a 2D robot-fighting game, reducing bugs by 30% through streamlined QA processes.</li>
+                <li>Coordinated with artists &amp; designers to align gameplay logic with UX goals.</li>
+                <li>Introduced a Trello-based bug tracking system, accelerating issue resolution and improving team efficiency.</li>
+              </ul>
+            </div>
+          </div> <!-- /.container -->
+        </div> <!-- /.resume-section -->
+
+        <!-- Notable Product Releases -->
+        <div class="resume-section">
+          <div class="container">
+            <h3>Notable Product Releases</h3>
+            <ul>
+              <li><strong>QA Lead:</strong> Unity Meta OpenXR, Oculus SDK Integration</li>
+              <li><strong>QA Engineer:</strong> Horizon Worlds, Quest 3 Launch</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="resume-section">
+          <div class="container">
+            <h3>Skills</h3>
+            <ul class="skills-grid">
+              <li>
+                <strong>Programming:</strong><br />
+                C#, C++, Java, Python
+              </li>
+              <li>
+                <strong>Testing Tools:</strong><br />
+                Unity Test Framework, NUnit
+              </li>
+              <li>
+                <strong>CI/CD:</strong><br />
+                Jenkins, cloud-based providers
+              </li>
+              <li>
+                <strong>Data Tools:</strong><br />
+                PowerBI, Looker Studio
+              </li>
+              <li>
+                <strong>Cross-Functional Collaboration:</strong><br />
+                Agile environments, triage &amp; sprint planning
+              </li>
+              <li>
+                <strong>Android Testing:</strong><br />
+                Multi-device experience, specialized in Oculus/Quest
+              </li>
+              <li>
+                <strong>Issue Management:</strong><br />
+                Jira, Trello
+              </li>
+              <li>
+                <strong>Desktop &amp; Mobile Apps:</strong><br />
+                OBS, Blender
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Certifications & Education -->
+        <div class="resume-section">
+          <div class="container">
+            <h3>Certifications &amp; Education</h3>
+            <div class="education-entry">
+              <ul>
+                <li><strong>ISTQB Certified Tester</strong></li>
+                <li><strong>Certified Unity Programmer</strong></li>
+                <li><strong>Cascadia College</strong> – Associate Degree in Computer Science</li>
+                <li><strong>University of Washington</strong> – Master’s in Education, BA in History</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact / Footer Info (optional to place here or at bottom) -->
+        <div class="resume-section">
+          <div class="container">
+            <h3>Contact</h3>
+            <p>
+              <strong>Phone:</strong> (206)-472-5125<br />
+              <strong>Email:</strong> <a href="mailto:taylor.philpott@gmail.com">taylor.philpott@gmail.com</a><br />
+              <strong>Location:</strong> Seattle, WA
+            </p>
+          </div>
+        </div>
+      </section> <!-- /#resume -->
+
+      <!-- Blog Section (#blog) -->
+      <section id="blog" class="four">
+        <div class="container">
+          <header>
+            <h2>Blog &amp; Fun</h2>
+          </header>
+          <p>
+            <!-- Add your blog content, dev diaries, or DnD/fun posts here. -->
+            You can share DnD stories, tutorials, or anything you like in a series of posts or sub-sections.
+          </p>
+          <!-- Example structure for posts:
+               <article>
+                 <h3>Blog Post Title</h3>
+                 <p>Content goes here...</p>
+               </article>
+          -->
+        </div>
+      </section>
+    </div> <!-- /#main -->
+
+    <!-- Main Footer (or you can keep the resume snippet's contact info as your main contact) -->
+    <footer id="footer">
+      <p style="text-align:center;">
+        &copy; 2025 t.g.Philpott. All rights reserved. Seattle, WA
+      </p>
+    </footer>
+
+    <!-- JS includes -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <scr
