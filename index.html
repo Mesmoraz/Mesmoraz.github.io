@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!-- Prologue's main CSS -->
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
 
@@ -21,7 +21,7 @@
         <div id="logo">
           <span class="image avatar48">
             <!-- Replace with your own image if you have one -->
-            <img src="images/avatar.jpg" alt="Avatar" />
+            <img src="images/taylorAvatar.jpg" alt="Avatar" />
           </span>
           <h1 id="title">t.g.Philpott</h1>
           <p>QA Engineer &amp; Game Enthusiast</p>
@@ -33,7 +33,6 @@
             <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
             <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
             <li><a href="#resume" id="resume-link"><span class="icon solid fa-file">Resume</span></a></li>
-            <li><a href="#blog" id="blog-link"><span class="icon solid fa-book">Blog &amp; Fun</span></a></li>
           </ul>
         </nav>
       </div>
@@ -74,108 +73,57 @@
       </section>
 
       <!-- Portfolio Section (#portfolio) -->
-      <section id="portfolio" class="two">
-        <div class="container">
-          <header>
-            <h2>Portfolio</h2>
-          </header>
-          <p>
-            Explore my collection of personal and professional projects, covering 
-            <strong>XR</strong>, <strong>Game Development</strong>, <strong>Blog Features</strong>, and more. 
-            Use the search bar below to quickly filter projects by name, description, or tags.
-          </p>
+<section id="portfolio" class="two">
+  <div class="container">
+    <header>
+      <h2>Portfolio</h2>
+    </header>
+    <p>
+      Explore my collection of personal and professional projects, covering 
+      <strong>XR</strong>, <strong>Game Development</strong>, <strong>Blog Features</strong>, and more. 
+      Use the search bar below to quickly filter projects by name, description, or tags.
+    </p>
 
-          <!-- Search Bar -->
-          <input
-            type="text"
-            id="portfolio-search"
-            placeholder="Search projects by title, tags, or keywords..."
-          />
+    <!-- Portfolio Grid -->
+    <div id="portfolio-container" class="row portfolio-grid">
+      
+      <!-- Portfolio Item 1 -->
+      <article class="col-4 col-12-mobile portfolio-item">
+        <a href="https://mesmoraz.itch.io/crypt" target="_blank" class="image fit">
+          <img src="images/cryptTitle.jpg" alt="Crypt Game Preview">
+        </a>
+        <h3>Crypt</h3>
+        <div class="learn-more-icon">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+      </article>
 
-          <!-- Portfolio Grid (Prologue style: row + columns) -->
-          <div id="portfolio-container" class="row">
-            <!-- Example Card 1 -->
-            <article class="col-6 col-12-mobile portfolio-card"
-              data-title="Unity Game - Crypt"
-              data-tags="Unity Game-dev"
-              data-description="A 3D platformer with procedurally generated levels"
-            >
-              <a href="#" class="image fit">
-                <img src="images/cryptTitle.jpg" alt="Crypt Game Preview">
-              </a>
-              <header>
-                <h3>Crypt</h3>
-                <p class="date-completed">Completed: Aug 2023</p>
-              </header>
-              <p class="description">
-                A 3D platformer with procedurally generated levels and challenging obstacles.
-              </p>
-              <p class="tags"><strong>Tags:</strong> Unity, Game-dev, platformer</p>
-              <footer>
-                <a href="https://mesmoraz.itch.io/crypt" class="button small" target="_blank">
-                  View on Itch.io
-                </a>
-              </footer>
-            </article>
+      <!-- Portfolio Item 2 -->
+      <article class="col-4 col-12-mobile portfolio-item">
+        <a href="downloads/dnd_campaign.pdf" download class="image fit">
+          <img src="images/dnd_campaign.gif" alt="DnD Campaign Preview">
+        </a>
+        <h3>DnD Homebrew Campaign</h3>
+        <div class="learn-more-icon">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+      </article>
 
-            <!-- Example Card 2 -->
-            <article class="col-6 col-12-mobile portfolio-card"
-              data-title="DnD Homebrew Campaign"
-              data-tags="personal blog tabletop"
-              data-description="A custom Dungeons & Dragons campaign"
-            >
-              <a href="#" class="image fit">
-                <img src="images/dnd_campaign.gif" alt="DnD Campaign Preview">
-              </a>
-              <header>
-                <h3>DnD Homebrew Campaign</h3>
-                <p class="date-completed">Completed: June 2022</p>
-              </header>
-              <p class="description">
-                A narrative-rich tabletop adventure with custom monsters, lore, and quest lines.
-              </p>
-              <p class="tags"><strong>Tags:</strong> Personal, Blog, Tabletop</p>
-              <footer>
-                <a href="downloads/dnd_campaign.pdf" class="button small" download>
-                  Download PDF
-                </a>
-              </footer>
-            </article>
+      <!-- Portfolio Item 3 -->
+      <article class="col-4 col-12-mobile portfolio-item">
+        <a href="https://github.com/tgphilpott/android-perf-dashboard" target="_blank" class="image fit">
+          <img src="images/android_dashboard.jpg" alt="Android Performance Dashboard">
+        </a>
+        <h3>Android Performance Dashboard</h3>
+        <div class="learn-more-icon">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+      </article>
 
-            <!-- Example Card 3 -->
-            <article class="col-6 col-12-mobile portfolio-card"
-              data-title="Android Performance Dashboard"
-              data-tags="professional android blog data"
-              data-description="Built a performance dashboard using Big Query and Looker Studio"
-            >
-              <span class="image fit">
-                <iframe
-                  width="100%"
-                  height="200"
-                  src="https://www.youtube.com/embed/VIDEO_ID"
-                  title="Android Performance Dashboard Demo"
-                  frameborder="0"
-                  allowfullscreen
-                ></iframe>
-              </span>
-              <header>
-                <h3>Android Performance Dashboard</h3>
-                <p class="date-completed">Completed: Feb 2023</p>
-              </header>
-              <p class="description">
-                Created using BigQuery and Looker Studio to track KPIs for mobile app performance.
-              </p>
-              <p class="tags"><strong>Tags:</strong> Professional, Android, Data</p>
-              <footer>
-                <a href="https://github.com/tgphilpott/android-perf-dashboard" 
-                   class="button small" target="_blank">
-                  View on GitHub
-                </a>
-              </footer>
-            </article>
-          </div> <!-- /#portfolio-container -->
-        </div> <!-- /.container -->
-      </section> <!-- /#portfolio -->
+    </div> <!-- /#portfolio-container -->
+  </div> <!-- /.container -->
+</section> <!-- /#portfolio -->
+
 
       <!-- Resume Section (#resume) 
            Replacing the placeholder with your actual resume code. -->
@@ -318,25 +266,6 @@
           </div>
         </div>
       </section> <!-- /#resume -->
-
-      <!-- Blog Section (#blog) -->
-      <section id="blog" class="four">
-        <div class="container">
-          <header>
-            <h2>Blog &amp; Fun</h2>
-          </header>
-          <p>
-            <!-- Add your blog content, dev diaries, or DnD/fun posts here. -->
-            You can share DnD stories, tutorials, or anything you like in a series of posts or sub-sections.
-          </p>
-          <!-- Example structure for posts:
-               <article>
-                 <h3>Blog Post Title</h3>
-                 <p>Content goes here...</p>
-               </article>
-          -->
-        </div>
-      </section>
     </div> <!-- /#main -->
 
     <!-- Main Footer (or you can keep the resume snippet's contact info as your main contact) -->
