@@ -1,0 +1,4 @@
+# Keep working notes out of the published site.
+exclude:
+  - ROADMAP.md
+  - github-metadata-proposal.md

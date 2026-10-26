@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor G. Philpott - Software Developer Portfolio</title>
+    <title>Taylor G. Philpott - AI Reliability and Test Engineering</title>
+    <meta name="description" content="Taylor G. Philpott: SDET at Unity. I build release gates, test infrastructure and AI agents that tell a team when software is safe to ship.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
@@ -13,16 +14,17 @@
 <body>
    <!-- Hero Section -->
    <header id="hero-section">
-    <div class="overlay"></div> <!-- Added overlay div -->
+    <div class="overlay"></div>
     <div class="hero-content">
         <h1>Taylor G. Philpott</h1>
-        <p>Bringing Worlds to Life with Unity and XR Technology</p>
-        <button class="header-cta" onclick="location.href='#portfolio-section'">View My Work</button>
+        <p>I build the tests, gates and AI agents that tell a team when software is safe to ship.</p>
+        <div class="hero-actions">
+            <button class="header-cta" onclick="location.href='https://mesmoraz.github.io/steadygate/'">Try the Steadygate demo</button>
+            <button class="header-cta" onclick="location.href='#portfolio-section'">View My Work</button>
+        </div>
     </div>
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop playsinline id="background-video">
         <source src="assets/videos/hero-background.mp4" type="video/mp4">
-        <!-- Fallback image for older browsers -->
-        <img src="assets/images/hero-background-fallback.jpg" alt="Background Image">
     </video>
     </header>
 
@@ -30,23 +32,24 @@
 <nav id="main-nav" class="nav-bar">
     <ul>
         <li><a href="#hero-section">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#qa-experience">QA Experience</a></li>
-        <li><a href="#portfolio-section">My Work</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#portfolio-section">Projects</a></li>
+        <li><a href="#qa-experience">Unity Work</a></li>
         <li><a href="#skills-section">Skills</a></li>
         <li><a href="#contact-section">Contact</a></li>
     </ul>
 </nav>
 
 
-    <!-- About Me Section -->
+<!-- About Me Section -->
 <section id="about-me" class="scroll-section">
     <div class="about-me-container">
         <div class="about-me-text">
             <h2>About Me</h2>
-            <p>Hi, I'm Taylor G. Philpott, a passionate software developer specializing in creating immersive experiences with Unity and XR technologies. With a strong foundation in game development and a background in teaching, I bring a unique blend of technical skills and communication abilities to every project.</p>
-            <p>My journey has taken me through various roles, including developing interactive VR applications, leading workshops, and mentoring aspiring developers. I thrive on solving complex problems and am driven by a desire to push the boundaries of what's possible in virtual and augmented reality.</p>
-            <p>Outside of coding, I enjoy crafting intricate D&D campaigns, exploring new game mechanics, and diving into the latest gaming trends. Let’s create something amazing together!</p>
+            <p>I'm an SDET on Unity's XR platform team in Bellevue. I've been there since February 2023.</p>
+            <p>My work is reliability. I build release gates, CI and device-lab automation, and AI agents that do triage a person used to do by hand. Most of it sits where a test result turns into a decision: ship it, block it, or say we don't know yet.</p>
+            <p>I like working close to the people who use what I build. At Unity I'm the technical point of contact for the Meta runtime across product, QA and engineering. In 2026 I also ran an eight-session advisory engagement directly with a startup founder.</p>
+            <p>Before software, I taught high school English and history for five years. I still explain things like a teacher: plainly, and with an example.</p>
         </div>
         <div class="about-me-image">
             <img src="assets/images/headshot.jpg" alt="Taylor G. Philpott">
@@ -54,183 +57,150 @@
     </div>
 </section>
 
-<!-- QA Experience Section -->
-<section id="qa-experience" class="scroll-section">
-    <h2>QA Experience & Technical Expertise</h2>
-    <div class="qa-container">
-        <!-- Experience Entry 1 -->
-        <div class="qa-entry">
-            <h3>Virtual Reality Platform QA</h3>
-            <p>Played a key role in quality assurance for advanced VR platforms, focusing on ensuring compatibility, stability, and performance across a range of XR devices. Leveraged automated and manual testing techniques to validate functionality and user experience.</p>
-        </div>
-        <!-- Experience Entry 2 -->
-        <div class="qa-entry">
-            <h3>Multiplayer VR Template Testing</h3>
-            <p>Executed comprehensive testing for a multiplayer VR template, ensuring seamless interaction and connectivity. Focused on functionality testing, performance benchmarking, and regression testing to provide a smooth user experience in multiplayer VR environments.</p>
-        </div>
-        <!-- Experience Entry 3 -->
-        <div class="qa-entry">
-            <h3>Cross-Platform Compatibility Testing</h3>
-            <p>Conducted cross-platform testing for XR development packages, verifying consistent performance and functionality across different hardware setups. Collaborated with development teams to identify and resolve issues related to compatibility and platform-specific behavior.</p>
-        </div>
-        <!-- Experience Entry 4 -->
-        <div class="qa-entry">
-            <h3>Performance Optimization and Stress Testing</h3>
-            <p>Led efforts in optimizing VR and XR applications by implementing performance benchmarks and stress testing scenarios. Identified bottlenecks and collaborated with engineers to enhance application stability and frame rate consistency under varying load conditions.</p>
-        </div>
-        <!-- Experience Entry 5 -->
-        <div class="qa-entry">
-            <h3>Quality Assurance for XR Interaction Systems</h3>
-            <p>Specialized in testing complex interaction systems within VR and AR environments, focusing on user interface responsiveness and input accuracy. Ensured compliance with best practices for XR development to deliver immersive and intuitive user experiences.</p>
-        </div>
-    </div>
-</section>
 
-
-<!-- Portfolio Section -->
+<!-- Projects Section -->
 <section id="portfolio-section" class="scroll-section">
-    <h2>My Work</h2>
-    <div class="portfolio-container">
-        <!-- Under Construction Notice -->
-        <div class="under-construction">
-            <p>🚧 This section is currently under construction as of September 3, 2024. Stay tuned for more updates! 🚧</p>
-        </div>
-        
-        <!-- Project 1 -->
-        <div class="portfolio-item">
-            <img src="assets/images/DontTurnItOff-thumbnail.jpg" alt="Don't Turn It Off Thumbnail">
-            <div class="portfolio-overlay">
-                <h3>Don't Turn It Off</h3>
-                <p>Horror Splash Art Scene made in Unity</p>
-                <a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank" class="project-link">View Project</a>
+    <h2>Projects</h2>
+    <div class="qa-container">
+
+        <!-- Steadygate -->
+        <div class="qa-entry case-study">
+            <h3>Steadygate</h3>
+            <p class="case-tagline">A statistical release gate for LLM agents, evals and flaky test suites. Python, open source.</p>
+            <p><strong>Problem.</strong> A gate like "fail if score &lt; 0.80" raises false alarms on noise, and passes quietly when half the suite crashed.</p>
+            <p><strong>What I built.</strong> A CLI that compares each run to your own history and answers PASS, REGRESSION or INCONCLUSIVE. Errors and missing cases can never make a run pass.</p>
+            <p><strong>Evidence.</strong> A live demo you can run in your browser, worked examples for noise, real regressions and crashed runs, and CI on every pull request.</p>
+            <div class="case-links">
+                <a href="https://mesmoraz.github.io/steadygate/" target="_blank" rel="noopener" class="project-link">Try the live demo</a>
+                <a href="https://github.com/Mesmoraz/steadygate" target="_blank" rel="noopener" class="project-link">View the code</a>
             </div>
         </div>
-        <!-- Additional project items can be added here -->
+
+        <!-- WaNonprofitConnect -->
+        <div class="qa-entry case-study">
+            <h3>WaNonprofitConnect</h3>
+            <p class="case-tagline">A platform for Washington nonprofits. React, TypeScript, .NET.</p>
+            <p><strong>Problem.</strong> Washington nonprofits need a way to be found, say what they need, and hear from groups and businesses that can help.</p>
+            <p><strong>What I built.</strong> A React and TypeScript app on a .NET API with a live SignalR feed and a MapLibre and deck.gl map. It loads public IRS and OSPI data, so every organization on it comes from a real source.</p>
+            <p><strong>Evidence.</strong> Every story ships with a Playwright end-to-end test named after it. GitHub Actions deploys to staging and production on Azure. The roadmap is a JSON file with a written SDLC.</p>
+            <div class="case-links">
+                <a href="https://github.com/Mesmoraz/WaNonprofitConnect" target="_blank" rel="noopener" class="project-link">View the code</a>
+            </div>
+        </div>
+
+        <!-- nativeloc -->
+        <div class="qa-entry case-study">
+            <h3>NativeLoc</h3>
+            <p class="case-tagline">Native-speaker localization for Android and Linux screen devices. TypeScript, open source.</p>
+            <p><strong>Problem.</strong> Translators get spreadsheets with no context, and kiosks and panels in the field need text that updates without a new build.</p>
+            <p><strong>What I built.</strong> A translator workspace with screenshots and placeholder checks, format adapters, a CLI, device SDKs for Android, Python and JS, and a Docker deployment.</p>
+            <p><strong>Evidence.</strong> The whole app runs in your browser as a live demo. Tests cover the adapters, validation, the server end to end and the JS SDK.</p>
+            <div class="case-links">
+                <a href="https://mesmoraz.github.io/nativeloc/" target="_blank" rel="noopener" class="project-link">Try the live demo</a>
+                <a href="https://github.com/Mesmoraz/nativeloc" target="_blank" rel="noopener" class="project-link">View the code</a>
+            </div>
+        </div>
+
+        <!-- Earlier work -->
+        <div class="qa-entry">
+            <h3>Earlier work</h3>
+            <p>Unity and game projects from before I moved into test engineering.</p>
+            <ul class="earlier-work">
+                <li><a href="https://mesmoraz.github.io/FlagRush/" target="_blank" rel="noopener">FlagRush</a>: a capture-the-flag networking simulator built with DOTS and Netcode for Entities.</li>
+                <li><a href="https://mesmoraz.github.io/Dungeon-Crawler-Prototype/" target="_blank" rel="noopener">Dungeon Crawler Prototype</a>: procedural level generation, playable in the browser.</li>
+                <li><a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank" rel="noopener">Don't Turn It Off</a>: a horror splash scene made in Unity.</li>
+                <li><a href="https://mesmoraz.github.io/WaypointAI/" target="_blank" rel="noopener">Waypoint AI</a>: a Unity waypoint AI demo.</li>
+                <li><a href="https://mesmoraz.github.io/Soccer-game-build/" target="_blank" rel="noopener">Mini Soccer</a>: waves of enemies with rising difficulty.</li>
+            </ul>
+        </div>
     </div>
 </section>
+
+
+<!-- Unity Work Section -->
+<section id="qa-experience" class="scroll-section">
+    <h2>What I Do at Unity</h2>
+    <p class="section-note">This work is internal, so there are no links. Happy to walk through any of it.</p>
+    <div class="qa-container">
+        <div class="qa-entry">
+            <h3>A statistical regression engine</h3>
+            <p>I took a baseline-comparison engine from RFC to production. It has three rule types (absolute, relative delta, MAD outlier) and gives CI a deterministic exit code. A companion tool suggests rules from historical data.</p>
+        </div>
+        <div class="qa-entry">
+            <h3>AI agents in production</h3>
+            <p>I wrote a Jenkins MCP server that engineers and agents use to read builds, tests and node health. It has 370+ tests and became team infrastructure. I also run scheduled Claude agents on Kubernetes that classify device-test failures and post triage to Slack, replacing a weekly manual investigation.</p>
+        </div>
+        <div class="qa-entry">
+            <h3>A multi-agent review pipeline</h3>
+            <p>Decomposition, architecture, implementation, QA, adversarial review and scored gates, with a person deciding at each gate. On about 13,000 lines of a colleague's pull requests, it caught two silent-green CI risks and a crash path that earlier review missed.</p>
+        </div>
+        <div class="qa-entry">
+            <h3>CI at scale</h3>
+            <p>I migrated the XR performance suite into the monorepo: 2,491 CI jobs across four device families. I fixed a 16-day CI blackout with two root causes in two repos, and closed the gaps where crashed runners reported a pass.</p>
+        </div>
+        <div class="qa-entry">
+            <h3>Device lab and test health</h3>
+            <p>I own a shared device lab for iOS, Android and Meta Quest. I built a test health dashboard for flakiness, staleness and green streaks. It surfaced 264 failing tests that had no ticket.</p>
+        </div>
+    </div>
+</section>
+
 
 <!-- Skills & Tools Section -->
 <section id="skills-section" class="scroll-section">
     <h2>Skills & Tools</h2>
-    
-    <!-- Technical Skills -->
     <div class="skills-container">
-        <!-- Skill: Unity -->
         <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Unity Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4117/4117112.png" alt="">
             <div class="skill-info">
-                <p>Unity</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-                <p class="skill-description">Extensive experience in Unity for developing immersive VR applications. <a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank">View Project</a></p>
+                <p>Test and release engineering</p>
+                <p class="skill-description">Framework and harness design, release gating, perf and benchmark testing, bisection, flaky-test triage. ISTQB Certified Tester.</p>
             </div>
         </div>
-
-        <!-- Skill: XR Development -->
         <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/4247/4247962.png" alt="XR Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3190/3190804.png" alt="">
             <div class="skill-info">
-                <p>XR Development</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-                <p class="skill-description">Skilled in building and deploying augmented and virtual reality experiences. Certified in AR Foundation. <a href="#">View XR Portfolio</a></p>
+                <p>Applied AI</p>
+                <p class="skill-description">MCP servers, scheduled LLM agents, multi-agent orchestration, prompt and tool design, human-in-the-loop review. <a href="https://github.com/Mesmoraz/steadygate" target="_blank" rel="noopener">See Steadygate</a></p>
             </div>
         </div>
-
-        <!-- Skill: Automation Testing -->
         <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/4117/4117112.png" alt="Automation Testing Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/5313/5313470.png" alt="">
             <div class="skill-info">
-                <p>Automation Testing</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-                <p class="skill-description">Expert in designing automated test frameworks using Selenium, Appium, and other tools. <a href="#">Explore Automation Projects</a></p>
+                <p>CI/CD and cloud</p>
+                <p class="skill-description">Jenkins, GitHub Actions, Kubernetes CronJobs, Docker, GCP (BigQuery), Grafana, Flask, SQLite.</p>
             </div>
         </div>
-
-        <!-- Skill: Test Strategy -->
         <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/3190/3190804.png" alt="Test Strategy Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="">
             <div class="skill-info">
-                <p>Test Strategy & Planning</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-                <p class="skill-description">Experienced in defining and implementing test strategies for large-scale projects. <a href="#">Read Case Study</a></p>
+                <p>Languages and platforms</p>
+                <p class="skill-description">Python, C#, SQL, Groovy, Bash. iOS, Android, Meta Quest, OpenXR, Windows, macOS, Linux.</p>
             </div>
         </div>
-
-        <!-- Skill: Continuous Integration -->
         <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/5313/5313470.png" alt="CI/CD Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3566/3566359.png" alt="">
             <div class="skill-info">
-                <p>CI/CD & DevOps</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 30%;"></div>
-                </div>
-                <p class="skill-description">Proficient in setting up CI/CD pipelines using Jenkins, GitLab, and Azure DevOps. <a href="#">See Workflow Automation</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Leadership & Soft Skills -->
-    <div class="skills-container">
-        <!-- Skill: Team Leadership -->
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Leadership Icon">
-            <div class="skill-info">
-                <p>Team Leadership</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-                <p class="skill-description">Led cross-functional teams to deliver high-quality products on time. <a href="#">View Leadership Insights</a></p>
-            </div>
-        </div>
-
-        <!-- Skill: Mentorship -->
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/3566/3566359.png" alt="Mentorship Icon">
-            <div class="skill-info">
-                <p>Mentorship & Training</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-                <p class="skill-description">Actively mentor junior developers, fostering growth and technical excellence. <a href="#">Read More on Mentorship</a></p>
-            </div>
-        </div>
-
-        <!-- Skill: Strategic Planning -->
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/4229/4229790.png" alt="Strategic Planning Icon">
-            <div class="skill-info">
-                <p>Strategic Planning</p>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
-                <p class="skill-description">Developed strategic initiatives to align development and testing goals. <a href="#">Explore Strategic Initiatives</a></p>
+                <p>Teaching and communication</p>
+                <p class="skill-description">Five years as a high school teacher. RFCs, decision records, runbooks and partner reports.</p>
             </div>
         </div>
     </div>
 </section>
-
 
 
     <!-- Contact Section -->
     <section id="contact-section" class="scroll-section">
         <h2>Get in Touch</h2>
-        <p>If you’re looking for a dedicated software developer to bring your projects to life, let’s connect!</p>
-        <button class="contact-cta" onclick="location.href='mailto:your-email@example.com'">Contact Me</button>
+        <p>I'm looking at forward deployed engineering, SDET and applied AI reliability roles. Email me or find me on LinkedIn.</p>
+        <button class="contact-cta" onclick="location.href='mailto:taylor.philpott@gmail.com'">Email Me</button>
     </section>
 
     <footer>
-        <p>&copy; 2024 Taylor G. Philpott</p>
+        <p>&copy; 2026 Taylor G. Philpott</p>
         <div class="social-links">
-            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
-            <!-- Add other social links if needed -->
+            <a href="https://github.com/Mesmoraz" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/taylorgphil/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
     </footer>
 

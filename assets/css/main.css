@@ -454,3 +454,115 @@ footer {
     font-weight: bold;
     border-radius: 5px;
 }
+/* Project case studies (reuse the qa-entry card) */
+#portfolio-section .qa-container {
+    margin-top: 2rem;
+}
+
+.case-tagline {
+    font-style: italic;
+}
+
+.case-links,
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.case-links {
+    justify-content: flex-start;
+}
+
+.case-links .project-link {
+    display: inline-block;
+}
+
+.earlier-work {
+    color: #dcdcdc;
+    line-height: 1.6;
+    padding-left: 1.2rem;
+}
+
+.earlier-work a,
+.qa-entry a:not(.project-link) {
+    color: #ffd700;
+}
+
+.section-note {
+    color: #dcdcdc;
+    margin-bottom: 2rem;
+}
+
+/* Phone width */
+@media (max-width: 700px) {
+    .nav-bar {
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem 0.5rem;
+    }
+
+    .nav-bar ul li a {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.15rem;
+    }
+
+    .hero-content {
+        margin: 0 16px;
+    }
+
+    section,
+    .scroll-section {
+        padding: 4rem 16px;
+    }
+
+    .about-me-container {
+        padding: 0;
+        gap: 2rem;
+    }
+
+    .about-me-text,
+    .about-me-image {
+        min-width: 0;
+        flex-basis: 100%;
+    }
+
+    .skill {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.contact-cta {
+    padding: 0.5rem 2rem;
+    background-color: #E0BBE4;
+    color: #24243e;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+}
+
+footer .social-links a {
+    color: #E0BBE4;
+    margin: 0 0.5rem;
+}
+
+/* Keep section headings clear of the fixed nav when jumping from a link */
+section {
+    scroll-margin-top: 4.5rem;
+}
