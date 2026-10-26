@@ -1,209 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor G. Philpott - AI Reliability and Test Engineering</title>
-    <meta name="description" content="Taylor G. Philpott: SDET at Unity. I build release gates, test infrastructure and AI agents that tell a team when software is safe to ship.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taylor G. Philpott · AI Reliability and Test Engineering</title>
+  <meta name="description" content="Taylor G. Philpott: SDET at Unity. I build release gates, test infrastructure and AI agents that tell a team when software is safe to ship.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Taylor G. Philpott · AI Reliability and Test Engineering">
+  <meta property="og:description" content="I build the tests, gates and AI agents that tell a team when software is safe to ship.">
+  <meta property="og:image" content="https://mesmoraz.github.io/assets/img/steadygate-demo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-   <!-- Hero Section -->
-   <header id="hero-section">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>Taylor G. Philpott</h1>
-        <p>I build the tests, gates and AI agents that tell a team when software is safe to ship.</p>
-        <div class="hero-actions">
-            <button class="header-cta" onclick="location.href='https://mesmoraz.github.io/steadygate/'">Try the Steadygate demo</button>
-            <button class="header-cta" onclick="location.href='#portfolio-section'">View My Work</button>
-        </div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Taylor G. Philpott</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#unity" class="nav-wide">Unity</a>
+      <a href="#about" class="nav-wide">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/Mesmoraz" class="nav-gh">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="eyebrow">AI reliability · test engineering</p>
+    <h1>I build the tests, gates and AI agents that tell a team when software is safe to ship.</h1>
+    <p class="lede">SDET at Unity · Seattle · open to forward-deployed, SDET and applied-AI roles.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://mesmoraz.github.io/steadygate/">Try the Steadygate demo</a>
+      <a class="btn btn-ghost" href="https://github.com/Mesmoraz">GitHub</a>
     </div>
-    <video autoplay muted loop playsinline id="background-video">
-        <source src="assets/videos/hero-background.mp4" type="video/mp4">
-    </video>
-    </header>
+    <p class="term" aria-hidden="true"><span class="prompt">$</span> steadygate run <span class="arrow">→</span> <span class="badge pass">PASS</span> <span class="dim">exit 0</span></p>
+  </section>
 
-<!-- Navigation Menu -->
-<nav id="main-nav" class="nav-bar">
-    <ul>
-        <li><a href="#hero-section">Home</a></li>
-        <li><a href="#about-me">About</a></li>
-        <li><a href="#portfolio-section">Projects</a></li>
-        <li><a href="#qa-experience">Unity Work</a></li>
-        <li><a href="#skills-section">Skills</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-    </ul>
-</nav>
+  <section id="work" class="section wrap">
+    <h2 class="section-title"><span class="num">01</span> Projects</h2>
 
+    <article class="card card-feature">
+      <a class="shot" href="https://mesmoraz.github.io/steadygate/">
+        <img src="assets/img/steadygate-demo.jpg" width="1280" height="760" loading="lazy"
+             alt="The Steadygate live demo: 'Your eval passed. Your agent got worse.' with PASS, REGRESSION and INCONCLUSIVE badges">
+      </a>
+      <div class="card-body">
+        <h3>Steadygate</h3>
+        <p class="tags">Python · CLI · open source</p>
+        <p class="summary">A statistical release gate for LLM agents, evals and flaky test suites.</p>
+        <dl class="cs">
+          <dt>Problem</dt>
+          <dd>A gate like "fail if score &lt; 0.80" raises false alarms on noise, and passes quietly when half the suite crashed.</dd>
+          <dt>Built</dt>
+          <dd>A CLI that compares each run to your own history and answers <span class="badge pass">PASS</span> <span class="badge fail">REGRESSION</span> or <span class="badge warn">INCONCLUSIVE</span>. Errors and missing cases can never make a run pass.</dd>
+          <dt>Evidence</dt>
+          <dd>A live demo you can run in your browser, worked examples for noise, real regressions and crashed runs, and CI on every pull request.</dd>
+        </dl>
+        <p class="links">
+          <a href="https://mesmoraz.github.io/steadygate/">Live demo</a>
+          <a href="https://github.com/Mesmoraz/steadygate">Code</a>
+        </p>
+      </div>
+    </article>
 
-<!-- About Me Section -->
-<section id="about-me" class="scroll-section">
-    <div class="about-me-container">
-        <div class="about-me-text">
-            <h2>About Me</h2>
-            <p>I'm an SDET on Unity's XR platform team in Bellevue. I've been there since February 2023.</p>
-            <p>My work is reliability. I build release gates, CI and device-lab automation, and AI agents that do triage a person used to do by hand. Most of it sits where a test result turns into a decision: ship it, block it, or say we don't know yet.</p>
-            <p>I like working close to the people who use what I build. At Unity I'm the technical point of contact for the Meta runtime across product, QA and engineering. In 2026 I also ran an eight-session advisory engagement directly with a startup founder.</p>
-            <p>Before software, I taught high school English and history for five years. I still explain things like a teacher: plainly, and with an example.</p>
+    <div class="grid-2">
+      <article class="card">
+        <div class="card-body">
+          <h3>WaNonprofitConnect</h3>
+          <p class="tags">React · TypeScript · .NET · Playwright</p>
+          <p class="summary">A platform for Washington nonprofits.</p>
+          <dl class="cs">
+            <dt>Problem</dt>
+            <dd>Washington nonprofits need a way to be found, say what they need, and hear from groups and businesses that can help.</dd>
+            <dt>Built</dt>
+            <dd>A React and TypeScript app on a .NET API with a live SignalR feed and a MapLibre and deck.gl map. It loads public IRS and OSPI data, so every organization on it comes from a real source.</dd>
+            <dt>Evidence</dt>
+            <dd>Every story ships with a Playwright end-to-end test named after it. GitHub Actions deploys to staging and production on Azure. The roadmap is a JSON file with a written SDLC.</dd>
+          </dl>
+          <p class="links">
+            <a href="https://github.com/Mesmoraz/WaNonprofitConnect">Code</a>
+          </p>
         </div>
-        <div class="about-me-image">
-            <img src="assets/images/headshot.jpg" alt="Taylor G. Philpott">
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>NativeLoc</h3>
+          <p class="tags">TypeScript · Docker · SDKs · open source</p>
+          <p class="summary">Native-speaker localization for Android and Linux screen devices.</p>
+          <dl class="cs">
+            <dt>Problem</dt>
+            <dd>Translators get spreadsheets with no context, and kiosks and panels in the field need text that updates without a new build.</dd>
+            <dt>Built</dt>
+            <dd>A translator workspace with screenshots and placeholder checks, format adapters, a CLI, device SDKs for Android, Python and JS, and a Docker deployment.</dd>
+            <dt>Evidence</dt>
+            <dd>The whole app runs in your browser as a live demo. Tests cover the adapters, validation, the server end to end and the JS SDK.</dd>
+          </dl>
+          <p class="links">
+            <a href="https://mesmoraz.github.io/nativeloc/">Live demo</a>
+            <a href="https://github.com/Mesmoraz/nativeloc">Code</a>
+          </p>
         </div>
+      </article>
     </div>
-</section>
+  </section>
 
-
-<!-- Projects Section -->
-<section id="portfolio-section" class="scroll-section">
-    <h2>Projects</h2>
-    <div class="qa-container">
-
-        <!-- Steadygate -->
-        <div class="qa-entry case-study">
-            <h3>Steadygate</h3>
-            <p class="case-tagline">A statistical release gate for LLM agents, evals and flaky test suites. Python, open source.</p>
-            <p><strong>Problem.</strong> A gate like "fail if score &lt; 0.80" raises false alarms on noise, and passes quietly when half the suite crashed.</p>
-            <p><strong>What I built.</strong> A CLI that compares each run to your own history and answers PASS, REGRESSION or INCONCLUSIVE. Errors and missing cases can never make a run pass.</p>
-            <p><strong>Evidence.</strong> A live demo you can run in your browser, worked examples for noise, real regressions and crashed runs, and CI on every pull request.</p>
-            <div class="case-links">
-                <a href="https://mesmoraz.github.io/steadygate/" target="_blank" rel="noopener" class="project-link">Try the live demo</a>
-                <a href="https://github.com/Mesmoraz/steadygate" target="_blank" rel="noopener" class="project-link">View the code</a>
-            </div>
-        </div>
-
-        <!-- WaNonprofitConnect -->
-        <div class="qa-entry case-study">
-            <h3>WaNonprofitConnect</h3>
-            <p class="case-tagline">A platform for Washington nonprofits. React, TypeScript, .NET.</p>
-            <p><strong>Problem.</strong> Washington nonprofits need a way to be found, say what they need, and hear from groups and businesses that can help.</p>
-            <p><strong>What I built.</strong> A React and TypeScript app on a .NET API with a live SignalR feed and a MapLibre and deck.gl map. It loads public IRS and OSPI data, so every organization on it comes from a real source.</p>
-            <p><strong>Evidence.</strong> Every story ships with a Playwright end-to-end test named after it. GitHub Actions deploys to staging and production on Azure. The roadmap is a JSON file with a written SDLC.</p>
-            <div class="case-links">
-                <a href="https://github.com/Mesmoraz/WaNonprofitConnect" target="_blank" rel="noopener" class="project-link">View the code</a>
-            </div>
-        </div>
-
-        <!-- nativeloc -->
-        <div class="qa-entry case-study">
-            <h3>NativeLoc</h3>
-            <p class="case-tagline">Native-speaker localization for Android and Linux screen devices. TypeScript, open source.</p>
-            <p><strong>Problem.</strong> Translators get spreadsheets with no context, and kiosks and panels in the field need text that updates without a new build.</p>
-            <p><strong>What I built.</strong> A translator workspace with screenshots and placeholder checks, format adapters, a CLI, device SDKs for Android, Python and JS, and a Docker deployment.</p>
-            <p><strong>Evidence.</strong> The whole app runs in your browser as a live demo. Tests cover the adapters, validation, the server end to end and the JS SDK.</p>
-            <div class="case-links">
-                <a href="https://mesmoraz.github.io/nativeloc/" target="_blank" rel="noopener" class="project-link">Try the live demo</a>
-                <a href="https://github.com/Mesmoraz/nativeloc" target="_blank" rel="noopener" class="project-link">View the code</a>
-            </div>
-        </div>
-
-        <!-- Earlier work -->
-        <div class="qa-entry">
-            <h3>Earlier work</h3>
-            <p>Unity and game projects.</p>
-            <ul class="earlier-work">
-                <li><a href="https://mesmoraz.github.io/FlagRush/" target="_blank" rel="noopener">FlagRush</a>: a capture-the-flag networking simulator built with DOTS and Netcode for Entities.</li>
-                <li><a href="https://mesmoraz.github.io/Dungeon-Crawler-Prototype/" target="_blank" rel="noopener">Dungeon Crawler Prototype</a>: procedural level generation, playable in the browser.</li>
-                <li><a href="https://mesmoraz.github.io/DontTurnItOff/" target="_blank" rel="noopener">Don't Turn It Off</a>: a horror splash scene made in Unity.</li>
-                <li><a href="https://mesmoraz.github.io/WaypointAI/" target="_blank" rel="noopener">Waypoint AI</a>: a Unity waypoint AI demo.</li>
-                <li><a href="https://mesmoraz.github.io/Soccer-game-build/" target="_blank" rel="noopener">Mini Soccer</a>: waves of enemies with rising difficulty.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-
-<!-- Unity Work Section -->
-<section id="qa-experience" class="scroll-section">
-    <h2>What I Do at Unity</h2>
+  <section id="unity" class="section wrap">
+    <h2 class="section-title"><span class="num">02</span> At Unity</h2>
     <p class="section-note">This work is internal, so there are no links. Happy to walk through any of it.</p>
-    <div class="qa-container">
-        <div class="qa-entry">
-            <h3>A statistical regression engine</h3>
-            <p>I took a baseline-comparison engine from RFC to production. It has three rule types (absolute, relative delta, MAD outlier) and gives CI a deterministic exit code. A companion tool suggests rules from historical data.</p>
-        </div>
-        <div class="qa-entry">
-            <h3>AI agents in production</h3>
-            <p>I wrote a Jenkins MCP server that engineers and agents use to read builds, tests and node health. It has 370+ tests and became team infrastructure. I also run scheduled Claude agents on Kubernetes that classify device-test failures and post triage to Slack, replacing a weekly manual investigation.</p>
-        </div>
-        <div class="qa-entry">
-            <h3>A multi-agent review pipeline</h3>
-            <p>Decomposition, architecture, implementation, QA, adversarial review and scored quality gates. On about 13,000 lines of a colleague's pull requests, it caught two silent-green CI risks and a crash path that earlier review missed.</p>
-        </div>
-        <div class="qa-entry">
-            <h3>CI at scale</h3>
-            <p>I migrated the XR performance suite into the monorepo: 2,491 CI jobs across four device families. I fixed a 16-day CI blackout with two root causes in two repos, and closed the gaps where crashed runners reported a pass.</p>
-        </div>
-        <div class="qa-entry">
-            <h3>Device lab and test health</h3>
-            <p>I own a shared device lab for iOS, Android and Meta Quest. I built a test health dashboard for flakiness, staleness and green streaks. It surfaced 264 failing tests that had no ticket.</p>
-        </div>
+
+    <ul class="facts">
+      <li>
+        <p class="stat">RFC → production</p>
+        <h3>A statistical regression engine</h3>
+        <p>I took a baseline-comparison engine from RFC to production. It has three rule types (absolute, relative delta, MAD outlier) and gives CI a deterministic exit code. A companion tool suggests rules from historical data.</p>
+      </li>
+      <li>
+        <p class="stat">370+ tests</p>
+        <h3>AI agents in production</h3>
+        <p>I wrote a Jenkins MCP server that engineers and agents use to read builds, tests and node health. It became team infrastructure. I also run scheduled Claude agents on Kubernetes that classify device-test failures and post triage to Slack, replacing a weekly manual investigation.</p>
+      </li>
+      <li>
+        <p class="stat">13,000 lines</p>
+        <h3>A multi-agent review pipeline</h3>
+        <p>Decomposition, architecture, implementation, QA, adversarial review and scored quality gates. On about 13,000 lines of a colleague's pull requests, it caught two silent-green CI risks and a crash path that earlier review missed.</p>
+      </li>
+      <li>
+        <p class="stat">2,491 jobs</p>
+        <h3>CI at scale</h3>
+        <p>I migrated the XR performance suite into the monorepo: 2,491 CI jobs across four device families. I fixed a 16-day CI blackout with two root causes in two repos, and closed the gaps where crashed runners reported a pass.</p>
+      </li>
+      <li>
+        <p class="stat">264 failures</p>
+        <h3>Device lab and test health</h3>
+        <p>I own a shared device lab for iOS, Android and Meta Quest. I built a test health dashboard for flakiness, staleness and green streaks. It surfaced 264 failing tests that had no ticket.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="about" class="section wrap">
+    <h2 class="section-title"><span class="num">03</span> About</h2>
+    <div class="about">
+      <img class="headshot" src="assets/img/headshot-480.jpg" width="240" height="240" alt="Taylor G. Philpott">
+      <div class="prose">
+        <p>I'm an SDET on Unity's XR platform team in Bellevue. I've been there since February 2023.</p>
+        <p>My work is reliability. I build release gates, CI and device-lab automation, and AI agents that do triage a person used to do by hand. Most of it sits where a test result turns into a decision: ship it, block it, or say we don't know yet.</p>
+        <p>I like working close to the people who use what I build. At Unity I'm the technical point of contact for the Meta runtime across product, QA and engineering. In 2026 I also ran an eight-session advisory engagement directly with a startup founder.</p>
+        <p>Before software, I taught high school English and history for five years. I still explain things like a teacher: plainly, and with an example.</p>
+      </div>
     </div>
-</section>
+  </section>
 
+  <section id="skills" class="section wrap">
+    <h2 class="section-title"><span class="num">04</span> Skills</h2>
+    <dl class="skills">
+      <div><dt>Test and release engineering</dt><dd>Framework and harness design, release gating, perf and benchmark testing, bisection, flaky-test triage. ISTQB Certified Tester.</dd></div>
+      <div><dt>Applied AI</dt><dd>MCP servers, scheduled LLM agents, multi-agent orchestration, prompt and tool design, human-in-the-loop review.</dd></div>
+      <div><dt>CI/CD and cloud</dt><dd>Jenkins, GitHub Actions, Kubernetes CronJobs, Docker, GCP (BigQuery), Grafana, Flask, SQLite.</dd></div>
+      <div><dt>Languages and platforms</dt><dd>Python, C#, SQL, Groovy, Bash. iOS, Android, Meta Quest, OpenXR, Windows, macOS, Linux.</dd></div>
+      <div><dt>Teaching and communication</dt><dd>Five years as a high school teacher. RFCs, decision records, runbooks and partner reports.</dd></div>
+    </dl>
+  </section>
 
-<!-- Skills & Tools Section -->
-<section id="skills-section" class="scroll-section">
-    <h2>Skills & Tools</h2>
-    <div class="skills-container">
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/4117/4117112.png" alt="">
-            <div class="skill-info">
-                <p>Test and release engineering</p>
-                <p class="skill-description">Framework and harness design, release gating, perf and benchmark testing, bisection, flaky-test triage. ISTQB Certified Tester.</p>
-            </div>
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/3190/3190804.png" alt="">
-            <div class="skill-info">
-                <p>Applied AI</p>
-                <p class="skill-description">MCP servers, scheduled LLM agents, multi-agent orchestration, prompt and tool design, human-in-the-loop review. <a href="https://github.com/Mesmoraz/steadygate" target="_blank" rel="noopener">See Steadygate</a></p>
-            </div>
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/5313/5313470.png" alt="">
-            <div class="skill-info">
-                <p>CI/CD and cloud</p>
-                <p class="skill-description">Jenkins, GitHub Actions, Kubernetes CronJobs, Docker, GCP (BigQuery), Grafana, Flask, SQLite.</p>
-            </div>
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="">
-            <div class="skill-info">
-                <p>Languages and platforms</p>
-                <p class="skill-description">Python, C#, SQL, Groovy, Bash. iOS, Android, Meta Quest, OpenXR, Windows, macOS, Linux.</p>
-            </div>
-        </div>
-        <div class="skill">
-            <img src="https://cdn-icons-png.flaticon.com/512/3566/3566359.png" alt="">
-            <div class="skill-info">
-                <p>Teaching and communication</p>
-                <p class="skill-description">Five years as a high school teacher. RFCs, decision records, runbooks and partner reports.</p>
-            </div>
-        </div>
-    </div>
-</section>
+  <section id="earlier" class="section wrap">
+    <h2 class="section-title"><span class="num">05</span> Earlier work</h2>
+    <p class="section-note">Unity and game projects.</p>
+    <ul class="earlier">
+      <li><a href="https://mesmoraz.github.io/FlagRush/">FlagRush</a> <span>A capture-the-flag networking simulator built with DOTS and Netcode for Entities.</span></li>
+      <li><a href="https://mesmoraz.github.io/Dungeon-Crawler-Prototype/">Dungeon Crawler Prototype</a> <span>Procedural level generation, playable in the browser.</span></li>
+      <li><a href="https://mesmoraz.github.io/DontTurnItOff/">Don't Turn It Off</a> <span>A horror splash scene made in Unity.</span></li>
+      <li><a href="https://mesmoraz.github.io/WaypointAI/">Waypoint AI</a> <span>A Unity waypoint AI demo.</span></li>
+      <li><a href="https://mesmoraz.github.io/Soccer-game-build/">Mini Soccer</a> <span>Waves of enemies with rising difficulty.</span></li>
+    </ul>
+  </section>
 
+</main>
 
-    <!-- Contact Section -->
-    <section id="contact-section" class="scroll-section">
-        <h2>Get in Touch</h2>
-        <p>I'm looking at forward deployed engineering, SDET and applied AI reliability roles. Email me or find me on LinkedIn.</p>
-        <button class="contact-cta" onclick="location.href='mailto:taylor.philpott@gmail.com'">Email Me</button>
-    </section>
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I'm looking at forward deployed engineering, SDET and applied AI reliability roles.</p>
+    <p class="actions">
+      <a class="btn btn-primary" href="mailto:taylor.philpott@gmail.com">taylor.philpott@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/taylorgphil/">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/Mesmoraz">GitHub</a>
+    </p>
+    <p class="fine">© 2026 Taylor G. Philpott</p>
+  </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2026 Taylor G. Philpott</p>
-        <div class="social-links">
-            <a href="https://github.com/Mesmoraz" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/taylorgphil/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
