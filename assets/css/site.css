@@ -135,8 +135,6 @@ p { margin: 0 0 1em; }
 .facts .stat { font: 500 14px/1 var(--mono); color: var(--accent); margin-bottom: 10px; }
 
 /* About */
-.about { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
-.headshot { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
 .prose { max-width: 62ch; }
 
 /* Skills */
@@ -174,8 +172,6 @@ p { margin: 0 0 1em; }
   .card-body { padding: 20px; }
   .cs { grid-template-columns: 1fr; gap: 2px; }
   .cs dd { margin-bottom: 10px; }
-  .about { grid-template-columns: 1fr; gap: 20px; }
-  .headshot { width: 120px; height: 120px; }
   .earlier a { min-width: 0; }
   .btn { height: 42px; }
 }
